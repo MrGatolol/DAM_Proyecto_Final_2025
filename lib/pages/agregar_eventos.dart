@@ -10,7 +10,7 @@ class EventosAgregar extends StatefulWidget {
   State<EventosAgregar> createState() => _EventosAgregarState();
 }
 class _EventosAgregarState extends State<EventosAgregar> {
-  // Llave global para identificar y validar el formulario
+  // Llave global para identificar y para validar los camposs
   final _formKey = GlobalKey<FormState>();
   final TextEditingController _tituloCtrl = TextEditingController();
   final TextEditingController _lugarCtrl = TextEditingController();
@@ -122,7 +122,7 @@ class _EventosAgregarState extends State<EventosAgregar> {
                   padding: const EdgeInsets.symmetric(vertical: 15),
                 ),
                 onPressed: () async {
-                  // Si el formulario es válido procedemos
+                  // si el formulario es valido guardamos
                   if (_formKey.currentState!.validate()) {
                     User? user = FirebaseAuth.instance.currentUser;
                     Map<String, dynamic> eventoData = {

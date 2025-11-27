@@ -6,7 +6,7 @@ class FirestoreService {
   Stream<QuerySnapshot> categorias() {
     return _db.collection('categorias').snapshots();
   }
-  // usamos future tambien porque agregar se hace una sola vez
+  // usamos future  porque agregar se hace una sola vez
   // guarda eventos en la coleccion y firestore genera un id automaticamente
   Future<void> agregarEvento(Map<String, dynamic> data) {
     return _db.collection('eventos').add(data);

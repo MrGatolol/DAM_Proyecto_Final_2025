@@ -4,7 +4,7 @@ class AuthService {
   // Necesitamos estas dos cosas para que funcione el login
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final GoogleSignIn _googleSignIn = GoogleSignIn();
-  // Función simple para ver si ya hay alguien logeado
+  // verifica estado actual del usuario
   Future<User?> currentUser() async {
     return _auth.currentUser;
   }
